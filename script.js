@@ -1,13 +1,8 @@
-//your JS code here. If required.
-let currElement=[];
-function handleOnClick(){
-
-	let elements=document.getElementById("colorSelect");
-
-	if(elements.length<=0)return;
-	elements.remove(0);
-	currElement=elements;
-	
-	document.getElementById("colorSelect")=currElement;
-
-}
+document.querySelector('input[type="button"]').addEventListener('click', function() {
+    
+    let dropdown = document.getElementById('colorSelect');
+    let selectedIndex = dropdown.selectedIndex;
+    if (selectedIndex !== -1) {
+        dropdown.remove(selectedIndex);
+    }
+});
